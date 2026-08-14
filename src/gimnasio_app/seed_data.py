@@ -31,6 +31,15 @@ WEEKLY_ROUTINES: dict[Weekday, list[Exercise]] = {
         Exercise(name="Elevacion de pantorrillas", sets=4, reps="15-20"),
         Exercise(name="Abdominales", sets=3, reps="15-20"),
     ],
-    Weekday.THURSDAY: [],
+    Weekday.THURSDAY: [
+        Exercise(name="Press de hombros", sets=4, reps="8-12"),
+        Exercise(name="Elevaciones laterales", sets=4, reps="12-15"),
+        Exercise(name="Elevaciones posteriores", sets=3, reps="12-15"),
+        Exercise(name="Encogimientos para trapecio", sets=3, reps="10-15"),
+        Exercise(name="Press de pecho en maquina", sets=3, reps="10-12"),
+        Exercise(name="Jalon al pecho", sets=3, reps="10-12"),
+        Exercise(name="Curl de biceps", sets=2, reps="12-15"),
+        Exercise(name="Triceps en polea", sets=2, reps="12-15"),
+    ],
     Weekday.FRIDAY: [],
 }

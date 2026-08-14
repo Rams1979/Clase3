@@ -26,5 +26,4 @@ def test_monday_first_strength_exercise_sets_and_reps():
 def test_days_without_spec_yet_still_empty():
     controller = RoutineController()
 
-    for day in (Weekday.THURSDAY, Weekday.FRIDAY):
-        assert controller.get_routine(day).exercises == []
+    assert controller.get_routine(Weekday.FRIDAY).exercises == []
