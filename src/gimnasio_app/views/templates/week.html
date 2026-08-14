@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Rutina semanal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Rutina semanal</h1>
+  <div class="week">
+    {% for routine in routines %}
+      <section class="day">
+        <h2>{{ routine.day.value | capitalize }}</h2>
+        {% if routine.exercises %}
+          <table>
+            <thead>
+              <tr><th>Ejercicio</th><th>Series</th><th>Repeticiones</th></tr>
+            </thead>
+            <tbody>
+              {% for exercise in routine.exercises %}
+                <tr>
+                  <td>{{ exercise.name }}</td>
+                  <td>{{ exercise.sets }}</td>
+                  <td>{{ exercise.reps }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        {% else %}
+          <p class="empty">Sin rutina cargada todavia</p>
+        {% endif %}
+      </section>
+    {% endfor %}
+  </div>
+</body>
+</html>
