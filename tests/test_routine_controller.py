@@ -10,15 +10,15 @@ def test_week_has_only_five_weekdays():
 
 
 def test_day_without_seed_starts_without_exercises():
-    controller = RoutineController()
-    assert controller.get_routine(Weekday.TUESDAY).exercises == []
+    controller = RoutineController(seed={})
+    assert controller.get_routine(Weekday.MONDAY).exercises == []
 
 
 def test_add_exercise_to_a_day():
-    controller = RoutineController()
-    controller.add_exercise(Weekday.TUESDAY, Exercise(name="Sentadillas", sets=4, reps="10"))
+    controller = RoutineController(seed={})
+    controller.add_exercise(Weekday.MONDAY, Exercise(name="Sentadillas", sets=4, reps="10"))
 
-    routine = controller.get_routine(Weekday.TUESDAY)
+    routine = controller.get_routine(Weekday.MONDAY)
 
     assert len(routine.exercises) == 1
     assert routine.exercises[0].name == "Sentadillas"

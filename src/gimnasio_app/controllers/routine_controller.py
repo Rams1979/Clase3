@@ -5,9 +5,10 @@ from gimnasio_app.seed_data import WEEKLY_ROUTINES
 class RoutineController:
     """Orquesta las operaciones sobre las rutinas de lunes a viernes."""
 
-    def __init__(self) -> None:
+    def __init__(self, seed: dict[Weekday, list[Exercise]] | None = None) -> None:
+        seed = WEEKLY_ROUTINES if seed is None else seed
         self._routines: dict[Weekday, Routine] = {
-            day: Routine(day=day, exercises=list(WEEKLY_ROUTINES[day]))
+            day: Routine(day=day, exercises=list(seed.get(day, [])))
             for day in Weekday
         }
 
