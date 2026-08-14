@@ -3,7 +3,8 @@ body {
   max-width: 900px;
   margin: 2rem auto;
   padding: 0 1rem;
-  color: #1a1a1a;
+  background: #121212;
+  color: #e6e6e6;
 }
 
 .week {
@@ -13,13 +14,15 @@ body {
 }
 
 .day {
-  border: 1px solid #ddd;
+  border: 1px solid #333;
   border-radius: 8px;
   padding: 1rem;
+  background: #1e1e1e;
 }
 
 .day h2 {
   margin-top: 0;
+  color: #ffffff;
 }
 
 table {
@@ -31,10 +34,14 @@ table {
 th, td {
   text-align: left;
   padding: 0.25rem 0.4rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  color: #b3b3b3;
 }
 
 .empty {
-  color: #888;
+  color: #9a9a9a;
   font-style: italic;
 }
