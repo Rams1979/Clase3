@@ -23,7 +23,8 @@ def test_monday_first_strength_exercise_sets_and_reps():
     assert sentadilla.reps == "10-12"
 
 
-def test_days_without_spec_yet_still_empty():
+def test_full_week_has_no_empty_days():
     controller = RoutineController()
 
-    assert controller.get_routine(Weekday.FRIDAY).exercises == []
+    for day in Weekday:
+        assert controller.get_routine(day).exercises != []
