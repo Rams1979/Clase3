@@ -1,4 +1,5 @@
 from gimnasio_app.models import Exercise, Routine, Weekday
+from gimnasio_app.seed_data import WEEKLY_ROUTINES
 
 
 class RoutineController:
@@ -6,7 +7,8 @@ class RoutineController:
 
     def __init__(self) -> None:
         self._routines: dict[Weekday, Routine] = {
-            day: Routine(day=day) for day in Weekday
+            day: Routine(day=day, exercises=list(WEEKLY_ROUTINES[day]))
+            for day in Weekday
         }
 
     def add_exercise(self, day: Weekday, exercise: Exercise) -> None:
