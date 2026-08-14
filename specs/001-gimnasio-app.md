@@ -1,6 +1,6 @@
 # Especificación 001: Aplicación de Gimnasio — Rutinas Semanales (Lunes a Viernes)
 
-**Estado:** Borrador
+**Estado:** Completado
 **Rama:** `001-gimnasio-app`
 
 ## Resumen

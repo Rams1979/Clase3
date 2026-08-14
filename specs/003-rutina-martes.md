@@ -1,6 +1,6 @@
 # Especificación 003: Rutina del Martes
 
-**Estado:** Borrador
+**Estado:** Completado
 **Rama:** `001-gimnasio-app`
 **Depende de:** [001-gimnasio-app](001-gimnasio-app.md)
 
